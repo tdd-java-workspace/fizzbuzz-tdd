@@ -3,6 +3,9 @@ package com.saveetha;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
@@ -17,37 +20,28 @@ public class FizzBuzzTest {
     @Test
     void toReturnOneWhenTheNumberIsOne() {
         int one = 1;
-        String stringOne = "1";
 
-        String actualValue = fizzBuzz.findFizzBuzz(one);
-
-        assertEquals(stringOne, actualValue);
+        assertThat(fizzBuzz.of(one), is(equalTo("1")));
     }
 
     @Test
     void toReturnFizzWhenTheNumberIsThreeOrMultipleOfThree() {
         int three = 3;
 
-        String actualValue = fizzBuzz.findFizzBuzz(three);
-
-        assertEquals("Fizz", actualValue);
+        assertThat(fizzBuzz.of(three), is(equalTo("Fizz")));
     }
 
     @Test
     void toReturnBuzzWhenTheNumberIsFiveOrMultipleOfFive() {
         int five = 5;
 
-        String actualValue = fizzBuzz.findFizzBuzz(five);
-
-        assertEquals("Buzz", actualValue);
+        assertThat(fizzBuzz.of(five), is(equalTo("Buzz")));
     }
 
     @Test
     void toReturnFizzBuzzWhenTheNumberIsFifteenOrMultipleOfFifteen() {
         int fifteen = 15;
 
-        String actualValue = fizzBuzz.findFizzBuzz(fifteen);
-
-        assertEquals("FizzBuzz", actualValue);
+        assertThat(fizzBuzz.of(fifteen), is(equalTo("FizzBuzz")));
     }
 }

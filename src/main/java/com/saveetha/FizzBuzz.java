@@ -2,7 +2,7 @@ package com.saveetha;
 
 public class FizzBuzz {
 
-    public String findFizzBuzz(int number) {
+    public String of(int number) {
         if(number % 15 == 0) {
             return "FizzBuzz";
         }
