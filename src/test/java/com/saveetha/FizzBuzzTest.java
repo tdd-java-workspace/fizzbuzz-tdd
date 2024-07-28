@@ -62,8 +62,8 @@ public class FizzBuzzTest {
 
     @Test
     void toReturnFizzBuzzWhenTheNumberContainsFifteen() {
-        int fiveHundredAndFifteen = 515;
+        int sevenHundredAndFifteen = 715;
 
-        assertThat(fizzBuzz.of(fiveHundredAndFifteen), is(equalTo("FizzBuzz")));
+        assertThat(fizzBuzz.of(sevenHundredAndFifteen), is(equalTo("FizzBuzz")));
     }
 }
