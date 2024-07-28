@@ -26,14 +26,18 @@ public class FizzBuzz {
     }
 
     private static boolean isNumberContainsThree(int number) {
-        return Integer.toString(number).contains("3");
+        return convertNumberToStringNumber(number).contains("3");
     }
 
- private static boolean isNumberContainsFive(int number) {
-        return Integer.toString(number).contains("5");
+    private static boolean isNumberContainsFive(int number) {
+        return convertNumberToStringNumber(number).contains("5");
     }
 
- private static boolean isNumberContainsFifteen(int number) {
-        return Integer.toString(number).contains("15");
+    private static boolean isNumberContainsFifteen(int number) {
+        return convertNumberToStringNumber(number).contains("15");
+    }
+
+    private static String convertNumberToStringNumber(int number) {
+        return Integer.toString(number);
     }
 }
