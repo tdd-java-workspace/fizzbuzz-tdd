@@ -3,6 +3,9 @@ package com.saveetha;
 public class FizzBuzz {
 
     public String findFizzBuzz(int number) {
+        if(number % 15 == 0) {
+            return "FizzBuzz";
+        }
         if(number % 3 == 0) {
             return "Fizz";
         }

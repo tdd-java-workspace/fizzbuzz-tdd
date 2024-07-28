@@ -36,4 +36,14 @@ public class FizzBuzzTest {
 
         assertEquals("Buzz", actualValue);
     }
+
+    @Test
+    void toReturnFizzBuzzWhenTheNumberIsFifteenOrMultipleOfFifteen() {
+        int fifteen = 15;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String actualValue = fizzBuzz.findFizzBuzz(fifteen);
+
+        assertEquals("FizzBuzz", actualValue);
+    }
 }
