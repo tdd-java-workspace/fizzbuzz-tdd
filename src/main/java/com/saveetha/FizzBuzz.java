@@ -3,13 +3,13 @@ package com.saveetha;
 public class FizzBuzz {
 
     public String of(int number) {
-        if( isNumberDivisibleByFifteen(number) ) {
+        if( isNumberDivisibleByFifteen(number) || isNumberContainsFifteen(number) ) {
             return "FizzBuzz";
         }
-        if( isNumberDivisibleByThree(number) ) {
+        if( isNumberDivisibleByThree(number) || isNumberContainsThree(number) ) {
             return "Fizz";
         }
-        if( isNumberDivisibleByFive(number) ) {
+        if( isNumberDivisibleByFive(number) || isNumberContainsFive(number) ) {
             return "Buzz";
         }
         return String.valueOf(number);
@@ -25,4 +25,15 @@ public class FizzBuzz {
         return number % 15 == 0;
     }
 
+    private static boolean isNumberContainsThree(int number) {
+        return Integer.toString(number).contains("3");
+    }
+
+ private static boolean isNumberContainsFive(int number) {
+        return Integer.toString(number).contains("5");
+    }
+
+ private static boolean isNumberContainsFifteen(int number) {
+        return Integer.toString(number).contains("15");
+    }
 }

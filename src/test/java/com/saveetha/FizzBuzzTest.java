@@ -45,4 +45,25 @@ public class FizzBuzzTest {
 
         assertThat(fizzBuzz.of(fifteen), is(equalTo("FizzBuzz")));
     }
+
+    @Test
+    void toReturnFizzWhenTheNumberContainsThree() {
+        int thirteen = 13;
+
+        assertThat(fizzBuzz.of(thirteen), is(equalTo("Fizz")));
+    }
+
+    @Test
+    void toReturnBuzzWhenTheNumberContainsFive() {
+        int fiftyEight = 58;
+
+        assertThat(fizzBuzz.of(fiftyEight), is(equalTo("Buzz")));
+    }
+
+    @Test
+    void toReturnFizzBuzzWhenTheNumberContainsFifteen() {
+        int fiveHundredAndFifteen = 515;
+
+        assertThat(fizzBuzz.of(fiveHundredAndFifteen), is(equalTo("FizzBuzz")));
+    }
 }
